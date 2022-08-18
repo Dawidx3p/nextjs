@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import Header from '../components/Header';
 
 const GlobalStyle2 = createGlobalStyle`
   body {
@@ -18,6 +19,7 @@ const GlobalStyle2 = createGlobalStyle`
 function MyApp({ Component, pageProps }) {
   return (<>
     <GlobalStyle2 />
+    <Header />
     <Component {...pageProps} />
   </>)
 }
