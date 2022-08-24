@@ -16,7 +16,7 @@ function QuestionDetail() {
   const [question, setQuestion] = useState({});
   useEffect(() => {
     async function fetchData(){
-        const data = await fetchData('https://api.stackexchange.com/2.2/questions/${id}?site=stackoverflow');
+        const data = await fetch(`https://api.stackexchange.com/2.2/questions/${id}?site=stackoverflow`);
         const result = await data.json();
         if(result){
             setQuestion(result.items[0]);
